@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inora Perfume</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo_black.png" alt="Inora Logo" />
+    </div>
+    <div class="nav-links">
+      <a href="home_new.html">Home</a>
+    </div>
+  </nav>
+
+  <!-- Main Product Container -->
+  <div class="container">
+    <div class="card">
+      <div class="product-image">
+        <img id="perfumeImage" src="serenno_10.jpeg" alt="Perfume Bottle" />
+      </div>
+      <div class="product-details">
+        <h1 class="product-name">SERENNO</h1>
+        <p class="tagline">Eau De Parfum</p>
+        <div class="price" id="price">₹199</div>
+        <div class="size-options">
+          <button onclick="changePerfume('10ml')" class="active">10ml</button>
+          <button onclick="changePerfume('50ml')">50ml</button>
+          <button onclick="changePerfume('100ml')">100ml</button>
+        </div>
+        <div class="order-instagram">
+  <a href="https://www.instagram.com/inora_fragrances?igsh=MWptdjdmMmptcHVpbA==" target="_blank">
+    <i class="fab fa-instagram"></i> Order Now via Instagram
+  </a>
+</div>
+<div class="order-whatsapp">
+  <a href="https://wa.me/917003887877" target="_blank">
+    <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+  </a>
+</div>
+        <div class="notes">
+          <h2>Fragrance Notes:</h2>
+          <ul>
+            <li>Top: Vanilla and Ginger</li>
+            <li>Middle: Lavender and Clary Sage</li>
+            <li>Base: Vetiver and Patchouli</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-logo-wrapper">
+    <img src="logo_black.png" alt="Inora Logo" class="footer-logo">
+  </div>
+</footer>
+
+
+
+  <script>
+    function changePerfume(size) {
+      const image = document.getElementById("perfumeImage");
+      const price = document.getElementById("price");
+      const buttons = document.querySelectorAll(".size-options button");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      if (size === "10ml") {
+        image.src = "serenno_10.jpeg";
+        price.textContent = "₹199";
+        buttons[0].classList.add("active");
+      } else if (size === "50ml") {
+        image.src = "serenno_50.jpeg";
+        price.textContent = "₹699";
+        buttons[1].classList.add("active");
+      } else {
+        image.src = "serenno_100.jpeg";
+        price.textContent = "₹1199";
+        buttons[2].classList.add("active");
+      }
+    }
+  </script>
+</body>
+</html>
